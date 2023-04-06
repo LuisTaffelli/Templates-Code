@@ -1,0 +1,17 @@
+# Componente de ejemplo con un head personalizado
+name: MyComponent
+head:
+  title: Página de ejemplo | Mi sitio web
+  meta:
+    - charset: utf-8
+    - name: viewport
+      content: width=device-width, initial-scale=1
+    - name: description
+      content: Descripción de la página de ejemplo
+    - name: keywords
+      content: Palabra clave 1, Palabra clave 2, Palabra clave 3
+  link:
+    - rel: icon
+      href: /favicon.ico
+    - rel: stylesheet
+      href: /styles.css

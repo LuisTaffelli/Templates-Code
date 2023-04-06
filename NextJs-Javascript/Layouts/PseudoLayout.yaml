@@ -1,0 +1,33 @@
+# Importamos los componentes necesarios
+import Head from 'next/head';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+# Definimos el componente Layout
+const Layout:
+  props:
+    title: string # Título de la página
+  children: ReactNode # Componentes hijos a renderizar en el layout
+  isHome: boolean # Indica si es la página principal o no
+  navbarLinks: array # Array con los links de la navbar
+
+  # Renderizamos el componente
+  render:
+    return (
+      # Agregamos el head de la página
+      <Head>
+        <title>{props.title}</title>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+      </Head>
+
+      # Agregamos la navbar
+      <Navbar links={navbarLinks} />
+
+      # Agregamos los componentes hijos
+      {props.children}
+
+      # Agregamos el footer
+      <Footer isHome={isHome} />
+    )

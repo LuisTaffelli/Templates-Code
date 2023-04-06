@@ -1,0 +1,30 @@
+component: 
+  name: MyComponent
+  serverSideProps:
+    function: fetchServerSideData
+  template: |
+    <div>
+      <h1>{{ data.title }}</h1>
+      <ul>
+        {{#each data.items}}
+          <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+    </div>
+  styles:
+    - style.css
+
+functions:
+  fetchServerSideData:
+    source: api.js
+    body: |
+      export async function fetchServerSideData() {
+        const res = await fetch('https://myapi.com/data')
+        const data = await res.json()
+
+        return {
+          props: {
+            data
+          }
+        }
+      }

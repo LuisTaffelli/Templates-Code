@@ -1,0 +1,22 @@
+componente: 
+  nombre: NombreDelComponente
+  ruta: /ruta/del/componente
+  props: 
+    - nombre: prop1
+      tipo: string
+      requerido: true
+    - nombre: prop2
+      tipo: number
+      requerido: false
+  estado:
+    - nombre: estado1
+      valorInicial: false
+    - nombre: estado2
+      valorInicial: ''
+  métodos:
+    - nombre: método1
+      parámetros: ['parametro1', 'parametro2']
+      descripción: Este método hace algo.
+    - nombre: método2
+      parámetros: ['parametro1']
+      descripción: Este método hace algo diferente.

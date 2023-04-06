@@ -1,0 +1,16 @@
+# Componente MyStaticPage
+name: MyStaticPage
+props:
+  pageTitle: string
+  posts: array
+
+# Función getStaticProps
+getStaticProps:
+  # Obtiene los datos de los posts desde un CMS
+  data: fetchFromCMS()
+
+  # Retorna los datos a la página como props
+  return:
+    props:
+      pageTitle: "Página Estática"
+      posts: data
